@@ -1,0 +1,117 @@
+// =========================================
+// ============= Mixin Start ===============
+// =========================================
+
+@mixin font-face($name, $file, $weight: null) {
+  @font-face {
+    font-family: "#{$name}";
+    src: url("../fonts/#{$file}.woff") format("woff");
+    src: url("../fonts/#{$file}.woff2") format("woff2");
+    font-style: normal;
+    font-weight: #{$weight};
+  }
+}
+
+@mixin font-rule($font-family, $weight: null) {
+  font-family: "#{$font-family}";
+  font-weight: $weight;
+}
+
+@mixin font-bold($font-size, $color) {
+  font-family: 'Gilroy';
+  font-weight: 700;
+  font-size: $font-size;
+  color: $color;
+}
+
+@mixin font-semibold($font-size, $color) {
+  font-family: 'Gilroy';
+  font-weight: 600;
+  font-size: $font-size;
+  color: $color;
+}
+
+@mixin font-medium($font-size, $color) {
+  font-family: 'Gilroy';
+  font-weight: 500;
+  font-size: $font-size;
+  color: $color;
+}
+
+@mixin font-regular($font-size, $color) {
+  font-family: 'Gilroy';
+  font-weight: 400;
+  font-size: $font-size;
+  color: $color;
+}
+
+@mixin autoprefixer($prop, $value) {
+  -webkit-#{$prop}: #{$value};
+  -moz-#{$prop}: #{$value};
+  -ms-#{$prop}: #{$value};
+  -o-#{$prop}: #{$value};
+  #{$prop}: #{$value};
+}
+
+@mixin background-rule {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin flex-rule($justify-content: null, $align-items: null) {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  @if $justify-content == center {
+    justify-content: center;
+  }
+  @else if $justify-content == between {
+    justify-content: space-between;
+  }
+  @else if $justify-content == around {
+    justify-content: space-around;
+  }
+  @else if $justify-content == end {
+    justify-content: flex-end;
+  }
+  @else {
+    justify-content: flex-start;
+  }
+
+  @if $align-items == center {
+    align-items: center;
+  }
+  @else if $align-items == start {
+    align-items: flex-start;
+  }
+  @else if $align-items == end {
+    align-items: flex-end;
+  }
+  @else if $align-items == baseline {
+    align-items: baseline;
+  }
+  @else {
+    align-items: normal;
+  }
+}
+
+@mixin truncate($width){
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: $width;
+}
+
+@mixin text-shorten($line) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
+// =========================================
+// ============= Mixin End =================
+// =========================================
