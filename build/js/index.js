@@ -14,9 +14,30 @@ $(document).ready(function() {
     dotsClass: 'home__carousel-nav',
   });
 
-  $('.header__profile-button--account').hover(function() {
-    
-  })
+  $('.blog__carousel-items').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 300,
+    variableWidth: true,
+    infinite: true,
+    autoplay: true,
+    centerMode: true,
+    // centerPadding: "30px",
+    swipeToSlide: true,
+    arrows: false,
+    dots: true,
+    dotsClass: 'blog__carousel-dots',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+    ]
+
+  });
 
   $(window).scroll(function() {
     const header = $('.header');

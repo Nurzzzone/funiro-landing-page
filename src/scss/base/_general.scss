@@ -82,3 +82,10 @@
     max-width: 300px;
   }
 }
+
+.section__title {
+
+  .title {
+    @include font-bold(40px,#3a3a3a);
+  }
+}

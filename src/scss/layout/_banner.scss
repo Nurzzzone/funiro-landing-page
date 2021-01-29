@@ -1,0 +1,25 @@
+.banner {
+  background-color: #fcf8f3;
+
+  &__inner {
+    padding: 44px;
+  }
+
+  &__card {
+    width: 35%;
+
+    &-title {
+      @include font-bold(40px,#3a3a3a);
+      margin-bottom: 8px;
+    }
+
+    &-subtitle {
+      @include font-medium(16px,#616161);
+      margin-bottom: 24px;
+    }
+
+    &-btn {
+      padding: 18px 40px;
+    }
+  }
+}
