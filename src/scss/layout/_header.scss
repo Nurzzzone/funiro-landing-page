@@ -21,6 +21,7 @@
 
   &__inner {
     @include flex-rule(0, center);
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     position: relative;
 
@@ -33,12 +34,16 @@
     margin-right: 40px;
 
     @media (min-width: 768px) and (max-width: 991px) {
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
       order: 1;
     }
 
     @media (max-width: 768px) {
       margin-right: 0;
       margin-left: 70px;
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
       order: 2;
     }
 
@@ -55,6 +60,8 @@
 
   &__nav {
     @media (min-width: 768px) and (max-width: 991px) {
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
       order: 2;
     }
 
@@ -87,10 +94,13 @@
 
   &__form {
     position: relative;
+    -ms-flex-positive: 1;
     flex-grow: 1;
     margin-right: 40px;
 
     @media (min-width: 768px) and (max-width: 991px) {
+      -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
       order: 4;
     }
 
@@ -131,11 +141,15 @@
     position: relative;
     
     @media (min-width: 768px) and (max-width: 991px) {
+      -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
       order: 3;
     }
 
     @media (max-width: 768px) {
       margin-left: 0;
+      -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
       order: 3;
     }
 

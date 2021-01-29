@@ -12,7 +12,7 @@
   }
 
   @media (max-width: 375px) {
-    height: calc(670px + 50px);
+    height: calc(670px + 10px);
   }
 
   &__inner {
@@ -28,6 +28,9 @@
     width: 40%;
     height: 100%;
     @include flex-rule(center, center);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 
     @media (max-width: 991px) {
