@@ -23,6 +23,10 @@
     width: 25%;
     @include flex-rule(0, center);
 
+    @media (max-width: 1200px) {
+      width: 23%;
+    }
+
     @media (max-width: 991px) {
       text-align: center;
       display: block;
@@ -47,15 +51,29 @@
         margin-right: 0px;
         margin-bottom: 10px;
       }
+
+      @media (max-width: 375px) {
+        width: 60px;
+        height: 60px;
+      }
     }
 
     &-title {
       @include font-semibold(18px,#3a3a3a);
       margin-bottom: 2px;
+
+      @media (max-width: 375px) {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
     }
 
     &-text {
       @include font-medium(16px,#898989);
+
+      @media (max-width: 375px) {
+        font-size: 20px;
+      }
     }
   }
 }

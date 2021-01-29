@@ -35,6 +35,11 @@
       background-color: #e89f71;
       color: #ffffff;
     }
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      padding: 18px 80px;
+    }
   }
 }
 

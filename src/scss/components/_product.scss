@@ -1,7 +1,22 @@
 .product {
-  background-color: #F4F5f7;
+  background-color: #f4f5f7;
   position: relative;
   cursor: pointer;
+
+  // @media (max-width: 425px) {
+  //   width: 85%;
+  //   margin-bottom: 20px;
+  //   margin-right: auto;
+  //   margin-left: auto;
+
+  //   &:last-child {
+  //     margin-bottom: 0px;
+  //   }
+  // }
+
+  // @media (max-width: 375px) {
+  //   width: 90%;
+  // }
 
   &:hover &__overlay {
     visibility: visible;
@@ -15,29 +30,97 @@
 
   &-body {
     padding: 16px 16px 30px 16px;
+
+    @media (max-width: 991px) {
+      padding: 16px 16px 16px 16px;
+    }
   }
 
   &-title {
     @include font-semibold(24px,#3a3a3a);
     margin-bottom: 8px;
+
+    @media (max-width: 991px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 18px;
+    }
   }
 
   &-subtitle {
     @include font-medium(16px,#898989);
     display: inline-block;
     margin-bottom: 8px;
+
+    @media (max-width: 991px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 14px;
+    }
   }
 
   &-price {
     @include flex-rule(between, center);
 
+    @media (max-width: 991px) {
+      @include flex-rule(0, 0);
+      flex-direction: column;
+
+      @media (max-width: 768px) {
+        @include flex-rule(between, center);
+        flex-direction: row;
+      }
+
+      @media (max-width: 425px) {
+        @include flex-rule(0, 0);
+        flex-direction: column;
+      }
+    }
+
     &-new {
       @include font-semibold(20px,#3a3a3a);
+
+      @media (max-width: 991px) {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 425px) {
+        font-size: 14px;
+      }
     }
 
     &-old {
       @include font-regular(16px,#b0b0b0);
       text-decoration: line-through;
+
+      @media (max-width: 991px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 425px) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -60,13 +143,21 @@
       padding: 40px;
       @include flex-rule(center, center);
       flex-direction: column;
+
+      @media (max-width: 1200px) {
+        padding: 20px;
+      }
     }
     
     &-btn {
-
       &-box {
         @include flex-rule(between, center);
         width: 100%;
+
+        @media (max-width: 991px) {
+          @include flex-rule(center, center);
+          flex-direction: column;
+        }
       }
 
       &-one {
@@ -81,6 +172,19 @@
         &:hover {
           background-color: darken(#ffffff, 5%);
         }
+
+        @media (max-width: 991px) {
+          margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 22px;
+        }
+
+        @media (max-width: 425px) {
+          font-size: 16px;
+          padding: 12px 0px;
+        }
       }
 
       &-two {
@@ -91,11 +195,38 @@
 
         svg {
           margin-right: 8px;
+
+          @media (max-width: 768px) {
+            width: 30px;
+            height: 30px;
+          }
+
+          @media (max-width: 425px) {
+            width: 24px;
+            height: 24px;
+          }
         }
 
         span {
           letter-spacing: .8px;
           @include font-medium(16px,#ffffff);
+
+          @media (max-width: 768px) {
+            font-size: 20px;
+          }
+
+          @media (max-width: 425px) {
+            font-size: 16px;
+          }
+        }
+
+        @media (max-width: 991px) {
+          margin-bottom: 15px;
+          margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+          margin-bottom: 20px;
         }
       }
     }
@@ -113,6 +244,24 @@
     @include font-medium(16px,#ffffff);
     @include flex-rule(center, center);
     flex-direction: column;
+
+    @media (max-width: 768px) {
+      width: 70px;
+      height: 70px;
+      font-size: 20px;
+    }
+
+    @media (max-width: 425px) {
+      width: 60px;
+      height: 60px;
+      font-size: 18px;
+    }
+
+    @media (max-width: 375px) {
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+    }
 
     &--sale {
       background-color: #e97171;

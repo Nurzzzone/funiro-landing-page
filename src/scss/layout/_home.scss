@@ -145,43 +145,46 @@
 
     &-dots {
       @include flex-rule(0, 0);
-    }
 
-    &-dot {
-      width: 26px;
-      height: 26px;
-      background-color: transparent;
-      border-radius: 50%;
-      position: relative;
-      border: 1px solid transparent;
-      cursor: pointer;
-      margin-right: 4px;
-      @include autoprefixer(transition, all .3s ease-in-out);
-
-      span {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #d8d8d8;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        @include autoprefixer(transition, all .3s ease-in-out);
-      }
-
-      &--active {
+      li.slick-active button {
         border: 1px solid #e89f7e;
 
-        span {
+        &::before  {
           background-color: #e89f7e;
         }
       }
 
-      &:hover {
-        span {
+      li button {
+        font-size: 0;
+        width: 26px;
+        height: 26px;
+        background-color: transparent;
+        border-radius: 50%;
+        position: relative;
+        border: 1px solid transparent;
+        display: block;
+        cursor: pointer;
+        margin-right: 4px;
+        @include autoprefixer(transition, all .3s ease-in-out);
+  
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #d8d8d8;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 10;
+          transform: translate(-50%, -50%);
+          @include autoprefixer(transition, all .3s ease-in-out);
+        }
+      }
+
+      li:hover button {
+        &::before  {
           background-color: #e89f7e;
         }
       }

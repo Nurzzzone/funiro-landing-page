@@ -1,16 +1,52 @@
 .banner {
   background-color: #fcf8f3;
+  position: relative;
+  height: 670px;
+
+  @media (max-width: 991px) {
+    height: calc(670px - 100px);
+  }
+
+  @media (max-width: 425px) {
+    height: 670px;
+  }
+
+  @media (max-width: 375px) {
+    height: calc(670px + 50px);
+  }
 
   &__inner {
-    padding: 44px;
+    padding: 44px 0;
+    height: 100%;
+
+    @media (max-width: 991px) {
+      padding: 24px 0;
+    }
   }
 
   &__card {
-    width: 35%;
+    width: 40%;
+    height: 100%;
+    @include flex-rule(center, center);
+    flex-direction: column;
+
+    @media (max-width: 991px) {
+      width: 40%;
+    }
+
+    @media (max-width: 425px) {
+      @include flex-rule(end, center);
+      width: 100%;
+      text-align: center;
+    }
 
     &-title {
       @include font-bold(40px,#3a3a3a);
       margin-bottom: 8px;
+
+      @media (max-width: 991px) {
+        font-size: 24px;
+      }
     }
 
     &-subtitle {
@@ -20,6 +56,166 @@
 
     &-btn {
       padding: 18px 40px;
+      margin-right: auto;
+
+      @media (max-width: 425px) {
+        font-size: 18px;
+        @include flex-rule(0, center);
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__carousel {
+    width: calc(60% - 30px);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    @include autoprefixer(transform, translateY(-50%));
+
+    @media (max-width: 991px) {
+      width: calc(60% - 30px);
+    }
+
+    @media (max-width: 768px) {
+      width: calc(62% - 30px);
+    }
+
+    @media (max-width: 425px) {
+      width: 100%;
+      top: 40px;
+      right: auto;
+      left: 0;
+      @include autoprefixer(transform, translateY(0));
+    }
+
+    @media (max-width: 375px) {
+      top: 60px;
+    }
+
+    &-dots {
+      padding-top: 30px;
+      @include flex-rule(0, center);
+
+      li.slick-active button{
+        border: 1px solid #e89f7e;
+
+        &::before  {
+          background-color: #e89f7e;
+        }
+      }
+
+      li button {
+        font-size: 0;
+        width: 26px;
+        height: 26px;
+        background-color: transparent;
+        border-radius: 50%;
+        position: relative;
+        border: 1px solid transparent;
+        display: block;
+        cursor: pointer;
+        margin-right: 4px;
+        @include autoprefixer(transition, all .3s ease-in-out);
+  
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #d8d8d8;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 10;
+          transform: translate(-50%, -50%);
+          @include autoprefixer(transition, all .3s ease-in-out);
+        }
+      }
+
+      li:hover button {
+        &::before  {
+          background-color: #e89f7e;
+        }
+      }
+    }
+
+    &-item {
+      width: 372px;
+      height: 486px;
+      margin-right: 15px;
+      margin-left: 15px;
+      position: relative;
+
+      @media (max-width: 991px) {
+        width: calc(372px - 70px);
+        height: calc(486px - 70px);
+      }
+
+      @media (max-width: 375px) {
+        width: calc(372px - 120px);
+        height: calc(486px - 120px);
+      }
+
+      &-img {
+        display: block;
+        width: 100%;
+        height: 486px;
+
+        @media (max-width: 991px) {
+          height: calc(486px - 70px);
+        }
+
+        @media (max-width: 375px) {
+          height: calc(486px - 120px);
+        }
+      }
+
+      &-card {
+        cursor: pointer;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        z-index: 25;
+        padding: 32px;
+        background-color: rgba(255, 255, 255, 0.85);
+        @include autoprefixer(backdrop-filter, blur(3px));
+        @include autoprefixer(transition, all .2s ease-in-out);
+
+        @media (max-width: 991px) {
+          padding: 24px;
+        }
+
+        @media (max-width: 425px) {
+          width: 70%;
+          padding: 12px;
+          bottom: 20px;
+          left: 50%;
+          @include autoprefixer(transform, translateX(-50%));
+        }
+
+        &:hover {
+          background-color: #ffffff;
+        }
+
+        &-suptitle {
+          @include font-medium(16px,#616161);
+
+          @media (max-width: 991px) {
+            font-size: 14px;
+          }
+        }
+
+        &-title {
+          @include font-semibold(28px,#3a3a3a);
+
+          @media (max-width: 991px) {
+            font-size: 24px;
+          }
+        }
+      }
     }
   }
 }
