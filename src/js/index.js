@@ -108,23 +108,27 @@ $(document).ready(function() {
   cartBtn.on('click', function() {
     const cart = $('.header__profile-cart');
 
-    if ($(window).width() > 768) {
+    // if ($(window).width() > 768) {
       cart.toggleClass('header__profile-cart--active');
-    }       
+    // }       
   })
 
 
   $(document).on('click', function(e) {
     const cart = $('.header__profile-cart');
-    // Исправить*
-    // Не попадаю по кнопке
+
     if (e.target.closest('.header__profile-button--cart') || e.target.closest('.header__profile-cart')) {
       return
     } else {
       cart.removeClass('header__profile-cart--active');
-      console.log('hello');
     }
-    console.log(e.target.closest('.header__profile-cart'))
+
+    if (e.target.closest('.burger') || e.target.closest('.header__mobile')) {
+      return
+    } else {
+      $('.header__mobile').removeClass('header__mobile--active');
+      $('.header').removeClass('header--active');
+    }
   })
 
   // $(window).on('resize', function() {
@@ -149,6 +153,15 @@ $(document).ready(function() {
       scrollTop: 0
     }, 800);
   });
+
+
+  mobileButtons = $('.header__mobile-menu-item');
+
+  mobileButtons.on('click', function() { 
+    const children = $(this).children('.header__mobile-submenu');
+
+    children.toggleClass('header__mobile-submenu--active');
+  })
 
   $('.header__menu-link').on('click', function(e) {
     e.preventDefault();
