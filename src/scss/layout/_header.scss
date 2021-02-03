@@ -398,6 +398,16 @@
         width: 400px;
       }
 
+      @media(max-width: 375px) {
+        top: calc(100% + 20px);
+        width: 300px;
+      }
+
+      @media(max-width: 375px) {
+        top: calc(100% + 20px);
+        width: 290px;
+      }
+
       &-content {
         position: relative;
         @include flex-rule(0, 0);

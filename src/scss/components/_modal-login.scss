@@ -11,6 +11,11 @@
   background-color: rgba(0,0,0,.65);
   display: none;
 
+  @media(max-width: 425px) {
+   padding-right: 15px;
+   padding-left: 15px;
+  }
+
   &--active {
     display: flex;
   }
@@ -21,16 +26,20 @@
     height: auto;
     background-color: #ffffff;
     border: 2px solid #dcdcdc;
+
+    @media(max-width: 425px) {
+      width: 100%;
+    }
   }
 
   &__header {
     border-bottom: 1px solid rgb(237, 237, 237);
     @include flex-rule(between, center);
+    margin-bottom: 10px;
   }
 
   &__title {
     @include font-medium(24px, #3a3a3a);
-    margin-bottom: 10px;
   }
 
   &__body {
