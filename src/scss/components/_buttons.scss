@@ -41,6 +41,13 @@
       padding: 18px 80px;
     }
   }
+
+  &-add {
+    &:disabled {
+      background-color: darken(#ffffff, 20%);
+      color: #aeaeae;
+    }
+  }
 }
 
 .burger {
