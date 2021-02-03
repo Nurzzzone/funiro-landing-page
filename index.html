@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD:index.html
   <meta property="og:image" content="1280x640.jpg" />
   <link rel="stylesheet" href="./css/main.css">
+=======
+  <link rel="stylesheet" href="./css/simplebar.css">
+>>>>>>> master:build/index.html
   <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/main.css">
   <title>Funiro</title>
 </head>
 <body>
@@ -147,12 +152,12 @@
               <svg width="24" height="24">
                 <use xlink:href="./assets/icons/sprite.svg#cart"></use>
               </svg>
-              <span class="cart-counter">3</span>
+              <span class="cart-counter">0</span>
             </button>
             <div class="header__profile-cart">
               <div class="header__profile-cart-content">
-                <ul class="header__profile-cart-items">
-                  <li class="header__profile-cart-item">
+                <ul class="header__profile-cart-items" data-simplebar>
+                  <!-- <li class="header__profile-cart-item">
                     <article class="header__profile-cart-product">
                       <img class="header__profile-cart-product-img" src="./assets/images/product-img-6.jpg" alt="image">
                       <div class="header__profile-cart-product-body">
@@ -165,40 +170,15 @@
                       </div>
                       <div class="header__profile-cart-product-overlay"></div>
                     </article>
-                  </li>
-                  <li class="header__profile-cart-item">
-                    <article class="header__profile-cart-product">
-                      <img class="header__profile-cart-product-img" src="./assets/images/product-img-6.jpg" alt="image">
-                      <div class="header__profile-cart-product-body">
-                        <h4 class="header__profile-cart-product-title">Syltherine</h4>
-                        <span class="header__profile-cart-product-price">Rp 2.500.000</span>
-                      </div>
-                      <div class="header__profile-cart-product-delete">
-                        <span></span>
-                        <span></span>
-                      </div>
-                      <div class="header__profile-cart-product-overlay"></div>
-                    </article>
-                  </li>
-                  <li class="header__profile-cart-item">
-                    <article class="header__profile-cart-product">
-                      <img class="header__profile-cart-product-img" src="./assets/images/product-img-6.jpg" alt="image">
-                      <div class="header__profile-cart-product-body">
-                        <h4 class="header__profile-cart-product-title">Syltherine</h4>
-                        <span class="header__profile-cart-product-price">Rp 2.500.000</span>
-                      </div>
-                      <div class="header__profile-cart-product-delete">
-                        <span></span>
-                        <span></span>
-                      </div>
-                      <div class="header__profile-cart-product-overlay"></div>
-                    </article>
-                  </li>
+                  </li> -->
                 </ul>
+                <div class="empty-cart empty-cart--active">
+                  <h2 class="empty-cart__title">Cart is empty</h2>
+                </div>
                 <div class="header__profile-cart-footer">
                   <div class="header__profile-cart-price">
                     <span class="header__profile-cart-price-title">Total price:</span>
-                    <span class="header__profile-cart-price-totalprice">Rp 2.500.000</span>
+                    <span class="header__profile-cart-price-totalprice">Rp 0</span>
                   </div>
                   <a href="#" class="btn header__profile-cart-checkout">Checkout</a>
                 </div>
@@ -343,8 +323,8 @@
                 <h5 class="product-title">Syltherine</h5>
                 <small class="product-subtitle">Stylish cafe chair</small>
                 <div class="product-price">
-                  <p class="product-price-new">Rp 2.500.000</p>
-                  <p class="product-price-old">Rp 3.500.000</p>
+                  <p class="product-price-new">2 500 000 Rp</p>
+                  <p class="product-price-old">3 500 000 Rp</p>
                 </div>
               </div>
               <div class="product-sale product-sale--sale">
@@ -352,7 +332,7 @@
               </div>
               <div class="product__overlay">
                 <div class="product__overlay-content">
-                  <button class="btn product__overlay-btn-one">Add to cart</button>
+                  <button class="btn product__overlay-btn-one btn-add">Add to cart</button>
                   <div class="product__overlay-btn-box">
                     <button class="btn product__overlay-btn-two">
                       <svg width="24" height="24">
@@ -376,12 +356,12 @@
                 <h5 class="product-title">Leviosa</h5>
                 <small class="product-subtitle">Stylish cafe chair</small>
                 <div class="product-price">
-                  <p class="product-price-new">Rp 2.500.000</p>
+                  <p class="product-price-new">2 500 000 Rp</p>
                 </div>
               </div>
               <div class="product__overlay">
                 <div class="product__overlay-content">
-                  <button class="btn product__overlay-btn-one">Add to cart</button>
+                  <button class="btn product__overlay-btn-one btn-add">Add to cart</button>
                   <div class="product__overlay-btn-box">
                     <button class="btn product__overlay-btn-two">
                       <svg width="24" height="24">
@@ -405,8 +385,8 @@
                 <h5 class="product-title">Lolito</h5>
                 <small class="product-subtitle">Luxury big sofa</small>
                 <div class="product-price">
-                  <p class="product-price-new">Rp 7.000.000</p>
-                  <p class="product-price-old">Rp 14.000.000</p>
+                  <p class="product-price-new">7 000 000 Rp</p>
+                  <p class="product-price-old">14 000 000 Rp</p>
                 </div>
               </div>
               <div class="product-sale product-sale--sale">
@@ -414,7 +394,7 @@
               </div>
               <div class="product__overlay">
                 <div class="product__overlay-content">
-                  <button class="btn product__overlay-btn-one">Add to cart</button>
+                  <button class="btn product__overlay-btn-one btn-add">Add to cart</button>
                   <div class="product__overlay-btn-box">
                     <button class="btn product__overlay-btn-two">
                       <svg width="24" height="24">
@@ -438,7 +418,7 @@
                 <h5 class="product-title">Respira</h5>
                 <small class="product-subtitle">Minimalist fan</small>
                 <div class="product-price">
-                  <p class="product-price-new">Rp 500.000</p>
+                  <p class="product-price-new">500 000 Rp</p>
                 </div>
               </div>
               <div class="product-sale product-sale--new">
@@ -446,7 +426,7 @@
               </div>
               <div class="product__overlay">
                 <div class="product__overlay-content">
-                  <button class="btn product__overlay-btn-one">Add to cart</button>
+                  <button class="btn product__overlay-btn-one btn-add">Add to cart</button>
                   <div class="product__overlay-btn-box">
                     <button class="btn product__overlay-btn-two">
                       <svg width="24" height="24">
@@ -470,12 +450,12 @@
                 <h5 class="product-title">Grifo</h5>
                 <small class="product-subtitle">Night lamp</small>
                 <div class="product-price">
-                  <p class="product-price-new">Rp 1.500.000</p>
+                  <p class="product-price-new">1 500 000 Rp</p>
                 </div>
               </div>
               <div class="product__overlay">
                 <div class="product__overlay-content">
-                  <button class="btn product__overlay-btn-one">Add to cart</button>
+                  <button class="btn product__overlay-btn-one btn-add">Add to cart</button>
                   <div class="product__overlay-btn-box">
                     <button class="btn product__overlay-btn-two">
                       <svg width="24" height="24">
@@ -499,7 +479,7 @@
                 <h5 class="product-title">Muggo</h5>
                 <small class="product-subtitle">Small mug</small>
                 <div class="product-price">
-                  <p class="product-price-new">Rp 150.000</p>
+                  <p class="product-price-new">150 000 Rp</p>
                 </div>
               </div>
               <div class="product-sale product-sale--new">
@@ -507,7 +487,7 @@
               </div>
               <div class="product__overlay">
                 <div class="product__overlay-content">
-                  <button class="btn product__overlay-btn-one">Add to cart</button>
+                  <button class="btn product__overlay-btn-one btn-add">Add to cart</button>
                   <div class="product__overlay-btn-box">
                     <button class="btn product__overlay-btn-two">
                       <svg width="24" height="24">
@@ -531,8 +511,8 @@
                 <h5 class="product-title">Pingky</h5>
                 <small class="product-subtitle">Cute bed set</small>
                 <div class="product-price">
-                  <p class="product-price-new">Rp 7.000.000</p>
-                  <p class="product-price-old">Rp 14.000.000</p>
+                  <p class="product-price-new">7 000 000 Rp</p>
+                  <p class="product-price-old">14 000 000 Rp</p>
                 </div>
               </div>
               <div class="product-sale product-sale--sale">
@@ -540,7 +520,7 @@
               </div>
               <div class="product__overlay">
                 <div class="product__overlay-content">
-                  <button class="btn product__overlay-btn-one">Add to cart</button>
+                  <button class="btn product__overlay-btn-one btn-add">Add to cart</button>
                   <div class="product__overlay-btn-box">
                     <button class="btn product__overlay-btn-two">
                       <svg width="24" height="24">
@@ -564,7 +544,7 @@
                 <h5 class="product-title">Potty</h5>
                 <small class="product-subtitle">Minimalist flower pot</small>
                 <div class="product-price">
-                  <p class="product-price-new">Rp 500.000</p>
+                  <p class="product-price-new">500 000 Rp</p>
                 </div>
               </div>
               <div class="product-sale product-sale--new">
@@ -572,7 +552,7 @@
               </div>
               <div class="product__overlay">
                 <div class="product__overlay-content">
-                  <button class="btn product__overlay-btn-one">Add to cart</button>
+                  <button class="btn product__overlay-btn-one btn-add">Add to cart</button>
                   <div class="product__overlay-btn-box">
                     <button class="btn product__overlay-btn-two">
                       <svg width="24" height="24">
@@ -755,6 +735,7 @@
 
   <script src="./js/jquery-3.5.1.min.js"></script>
   <script src="./js/slick.min.js"></script>
+  <script src="./js/simplebar.js"></script>
   <script src="./js/index.js"></script>
 </body>
 </html>
