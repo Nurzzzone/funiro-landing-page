@@ -30,8 +30,13 @@
         <nav class="header__nav">
           <ul class="header__menu">
             <li class="header__menu-item">
+<<<<<<< HEAD:index.html
               <a href="#" class="header__menu-link">Products
                 <svg width="20" height="20" fill="#3a3a3a">
+=======
+              <a href="products-page.html" class="header__menu-link">Products
+                <svg width="20" height="20">
+>>>>>>> master:build/index.html
                   <use xlink:href="./assets/icons/sprite.svg#arrow-down"></use>
                 </svg>
               </a>
@@ -129,7 +134,7 @@
               <a href="#" class="header__mobile-menu-link">Inspirations</a>
             </li>
             <li class="header__mobile-menu-item">
-              <a href="#" class="header__mobile-menu-link">About Us</a>
+              <a href="about-page.html" class="header__mobile-menu-link">About Us</a>
             </li>
           </ul>
         </nav>
@@ -186,8 +191,17 @@
             </div>
           </div>
           <button class="btn header__profile-button header__profile-button--account">
-            <img src="./assets/images/profile-img.png" alt="profile-img">
+            <!-- <img src="./assets/images/user.png" alt="profile-img"> -->
+            <svg width="24" height="24" fill="#262F56">
+              <use xlink:href="./assets/icons/sprite.svg#user"></use>
+            </svg>
           </button>
+          <div class="header__profile-account">
+            <div class="header__profile-account-content">
+              <a href="#" class="btn header__profile-account-button btn-login">Sign in</a>
+              <a href="#" class="btn header__profile-account-button btn-signup">Sign up</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -732,6 +746,58 @@
       <use stroke="#ffffff" fill="#ffffff" xlink:href="./assets/icons/sprite.svg#arrow-down"></use>
     </svg>
   </button>
+
+  <div class="modal-login">
+    <div class="modal-login__content">
+      <div class="modal-login__header">
+        <h3 class="modal-login__title">Sign in</h3>
+        <div class="modal-login__close">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <form class="modal-login__body">
+        <input class="modal-login__input" type="text" placeholder="Username" required>
+        <input class="modal-login__input" type="password" placeholder="Password" required>
+        <input class="btn modal-login__btn" type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-signup">
+    <div class="modal-signup__content">
+      <div class="modal-signup__header">
+        <h3 class="modal-signup__title">Sign up</h3>
+        <div class="modal-signup__close">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <form class="modal-signup__body">
+        <input class="modal-signup__input" type="email" placeholder="Email">
+        <input class="modal-signup__input" type="text" placeholder="Username" required>
+        <input class="modal-signup__input" type="password" placeholder="Password" required>
+        <input class="btn modal-signup__btn" type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+  <div class="loader" id="loader">
+    <div class="loader__content">
+      <h2 class="loader__title">Funiro.</h2>
+      <p class="loader__subtitle">Worldwide furniture store since 2020. We sell over 1000+ branded products on our website</p>
+      <div class="lds-roller" >
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
 
   <script src="./js/jquery-3.5.1.min.js"></script>
   <script src="./js/slick.min.js"></script>
