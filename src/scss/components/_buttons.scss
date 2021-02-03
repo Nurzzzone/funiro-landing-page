@@ -85,7 +85,7 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  z-index: 100;
+  z-index: 200;
   background-color: #e89f71;
   @include flex-rule(center, center);
   flex-direction: column;

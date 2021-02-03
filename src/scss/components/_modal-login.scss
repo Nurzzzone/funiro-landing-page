@@ -1,0 +1,93 @@
+.modal-login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include flex-rule(center, center);
+  flex-direction: column;
+  z-index: 200;
+  background-color: rgba(0,0,0,.65);
+  display: none;
+
+  &--active {
+    display: flex;
+  }
+
+  &__content {
+    padding: 20px;
+    width: 500px;
+    height: auto;
+    background-color: #ffffff;
+    border: 2px solid #dcdcdc;
+  }
+
+  &__header {
+    border-bottom: 1px solid rgb(237, 237, 237);
+    @include flex-rule(between, center);
+  }
+
+  &__title {
+    @include font-medium(24px, #3a3a3a);
+    margin-bottom: 10px;
+  }
+
+  &__body {
+    padding: 10px 0 0;
+    @include flex-rule(0, 0);
+    flex-direction: column;
+  }
+
+  &__input {
+    @include font-medium(16px, #000000);
+    border: 1px solid #dddddd;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 10px;
+
+    &::placeholder {
+      @include font-regular(16px, #3a3a3a);
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    background-color: #e89f71;
+    padding: 12px 0px;
+
+    &:hover {
+      background-color: darken(#e89f71, 5%);
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    z-index: 30;
+    @include flex-rule(center, center);
+    flex-direction: column;
+
+    &:hover span{
+      background-color: darken(#bfbfbf, 40%);
+    }
+
+    span {
+      width: 18px;
+      height: 3px;
+      background-color: #bfbfbf;
+      @include autoprefixer(transition, all .3s ease-in-out);
+
+      &:nth-child(1) {
+        @include autoprefixer(transform, rotate(-45deg));
+      }
+
+      &:nth-child(2) {
+        @include autoprefixer(transform, rotate(45deg));
+        margin-top: -3px;
+      }
+    }
+  }
+}
