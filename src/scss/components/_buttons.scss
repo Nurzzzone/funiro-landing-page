@@ -65,6 +65,7 @@
       background-color: transparent;
       height: 100%;
       @include flex-rule(between, center);
+      -ms-flex-direction: column;
       flex-direction: column;
       padding: 9px 0;
   
@@ -88,6 +89,7 @@
   z-index: 200;
   background-color: #e89f71;
   @include flex-rule(center, center);
+  -ms-flex-direction: column;
   flex-direction: column;
   border: 1px solid transparent;
   visibility: hidden;

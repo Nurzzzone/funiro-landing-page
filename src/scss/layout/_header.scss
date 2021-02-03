@@ -54,7 +54,7 @@
     }
 
     @media (max-width: 425px) {
-      margin-left: 0px;
+      margin-left: 37px;
     }
 
     &-link {
@@ -134,6 +134,7 @@
 
       &-item {
         @include flex-rule(0, 0);
+        -ms-flex-direction: column;
         flex-direction: column;
         margin-right: 30px;
       }
@@ -179,11 +180,13 @@
 
     &-menu {
       @include flex-rule(0, 0,);
+      -ms-flex-direction: column;
       flex-direction: column;
 
       &-item {
         @include flex-rule(0 0);
-        flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;;
 
       }
 
@@ -221,7 +224,8 @@
 
     &-submenu {
       @include flex-rule(0, 0);
-      flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;;
       @include autoprefixer(transition, all .3s ease-in-out);
       display: none;
 
@@ -231,6 +235,7 @@
       
       &-item {
         @include flex-rule(left, 0);
+        -ms-flex-direction: column;
         flex-direction: column;
       }
 
@@ -305,6 +310,12 @@
     &-button { // header__profile-button
       display: inline-block;
       margin-right: 30px;
+
+      &--favorite {
+        @media (max-width: 425px) {
+          display: none;
+        }
+      }
       
       &:last-child {
         margin: 0;
@@ -312,7 +323,7 @@
 
       @media (max-width: 425px) {
         &:nth-child(1) {
-          display: none;
+          // display: none;
         }
 
         &:nth-child(2) {
@@ -323,6 +334,8 @@
       @media (max-width: 768px) {
         margin-right: 15px;
       }
+
+
 
       &--account { // header__profile-button--account
         width: 40px;
@@ -346,6 +359,7 @@
           border-radius: 50%;
           background-color: #e4905b;
           @include flex-rule(center, center);
+          -ms-flex-direction: column;
           flex-direction: column;
           color: #ffffff;
           font-size: 8px;
@@ -381,11 +395,13 @@
 
       @media(max-width: 768px) {
         top: calc(100% + 20px);
+        width: 400px;
       }
 
       &-content {
         position: relative;
         @include flex-rule(0, 0);
+        -ms-flex-direction: column;
         flex-direction: column;
       }
 
@@ -396,7 +412,12 @@
       &-items {
         height: 230px;
         @include flex-rule(0, 0);
+        -ms-flex-direction: column;
         flex-direction: column;
+
+        @media(max-width: 768px) {
+          height: 180px;
+        }
       }
 
       &-item {
@@ -433,6 +454,7 @@
 
         &-body {
           @include flex-rule(center, 0);
+          -ms-flex-direction: column;
           flex-direction: column;
         }
 
@@ -462,6 +484,7 @@
           z-index: 30;
           @include autoprefixer(transform, translateY(-50%));
           @include flex-rule(center, center);
+          -ms-flex-direction: column;
           flex-direction: column;
 
           &:hover span{
@@ -523,6 +546,7 @@
         height: 100%;
         width: 100%;
         @include flex-rule(center, center);
+        -ms-flex-direction: column;
         flex-direction: column;
         display: none;
 
@@ -541,11 +565,15 @@
       // width: 200px;
       background-color: #ffffff;
       position: absolute;
-      top: calc(100% + 20px);
-      right: 20px;
+      top: calc(100% + 10px);
+      right: 0px;
       z-index: 20;
       border: 1px solid #dcdcdc;
       display: none;
+
+      @media(max-width:425px) {
+        width: 80px;
+      }
 
       &--active {
         display: block;
@@ -553,6 +581,7 @@
 
       &-content {
         @include flex-rule(0, 0);
+        -ms-flex-direction: column;
         flex-direction: column;
       }
 
