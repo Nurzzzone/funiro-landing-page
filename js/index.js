@@ -23,7 +23,7 @@ $(document).ready(function() {
   $(window).scroll(function() {
     const scroll = $(window).scrollTop();
 
-    if(scroll >= headerPos) {
+    if(scroll >= 40) {
       header.addClass('header--fixed');
       $('.header__form-search').css({"backgroundColor": "transparent"});
     } else {
