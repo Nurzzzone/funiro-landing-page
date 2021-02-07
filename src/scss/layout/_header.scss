@@ -155,14 +155,14 @@
     background-color: #fff;
     width: 40vw;
     height: 100vh;
+    top: calc(100% + 10px);
     left: -100%;
-    top: 100%;
     visibility: hidden;
     opacity: 0;
     @include autoprefixer(transition, all .3s ease-in-out);
 
     @media(max-width: 425px) {
-      width: 50vh;
+      width: 50vw;
     }
 
     @media(max-width: 375px) {
@@ -173,9 +173,13 @@
     &--active {
       left: calc(0% - 15px);
 
-      // @media(max-width: 375px) {
-      //   left: 0;
-      // }
+      @media(max-width: 425px) {
+        left: calc(0% - 30px);
+      }
+
+      @media(max-width: 375px) {
+        left: calc(0% - 15px);
+      }
     }
 
     &-menu {
@@ -398,7 +402,7 @@
         width: 400px;
       }
 
-      @media(max-width: 375px) {
+      @media(max-width: 425px) {
         top: calc(100% + 20px);
         width: 300px;
       }
